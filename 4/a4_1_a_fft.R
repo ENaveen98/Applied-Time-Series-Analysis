@@ -1,0 +1,17 @@
+k_1 = seq(0, 5, by = 1)
+xk_1 = 4*sin(pi*(k_1-2)/3)
+xkf_1 = fft(xk_1)
+plot(k_1, Mod(xkf_1), type='h', main='(i) Magnitude', xlab='n', ylab='Magnitude')
+plot(k_1, Arg(xkf_1), main='(i) Phase', xlab='n', ylab='Phase')
+
+k_2 = seq(0, 14, by = 1)
+xk_2 = cos(2*pi*k_2/3)+sin(2*pi*k_2/5)
+xkf_2 = fft(xk_2)
+plot(k_2, Mod(xkf_2), type='h', main='(ii) Magnitude', xlab='n', ylab='Magnitude')
+plot(k_2, Arg(xkf_2), main='(ii) Phase', xlab='n', ylab='Phase')
+
+k_3 = seq(0, 14, by = 1)
+xk_3 = cos(2*pi*k_3/5)*sin(2*pi*k_3/3)
+xkf_3 = fft(xk_3)
+plot(k_3, Mod(xkf_3), type='h', main='(iii) Magnitude', xlab='n', ylab='Magnitude')
+plot(k_3, Arg(xkf_3), main='(iii) Phase', xlab='n', ylab='Phase')
